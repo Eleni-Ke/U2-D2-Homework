@@ -434,9 +434,25 @@
             navbarNode.appendChild(newLinkNode);
         }
         // Write a JavaScript functionality to change the color of the main heading title
+        const changeColorOfMainHeading = function(newColor) {
+            let mainHeadingNode = document.querySelector("h1");
+            mainHeadingNode.style.color = newColor;
+        }
         // Write a JavaScript functionality to change the background of the jumbotron
+        const changeBackgroundOfJumbotron = function(newColor) {
+            let jumbotronNode = document.querySelector(".jumbotron");
+            jumbotronNode.style.background = newColor;
+        }
 
         // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
+
+        
+
+        const removeTwitter = function() {
+            document.querySelector(".blog-sidebar>div:nth-of-type(3)>ol>li:nth-of-type(2)").innerHTML = "";
+        }
+        window.addEventListener("load", (removeTwitter))
+
 
         // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
