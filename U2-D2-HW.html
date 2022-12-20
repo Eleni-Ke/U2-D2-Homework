@@ -4,6 +4,66 @@
 
 <head>
     <style>
+        /* exercise 1 */
+        h1 {
+            color: pink;
+        }
+
+        /* exercise 2 */
+        .nav > *{
+            color: turquoise;
+        }
+
+        /* exercise 3 */
+        .jumbotron .lead.mb-0 a{
+            color: purple;
+        }
+
+        /* exercise 4 */
+        .col-md-8.blog-main>div:first-of-type {
+            border:5px solid magenta;
+        }
+
+        /* exercise 5 */
+        .col-md-8.blog-main>div:first-of-type hr{
+            background-color: red;
+        }
+
+        /* exercise 6 */
+        .nav > :nth-of-type(even) {
+            background-color: black;
+        }
+
+        /* exercise 7 */
+        .blog-sidebar div:nth-of-type(2) li {
+            background-color:rgba(179, 237, 179, 0.688);
+        }
+
+        /* exercise 8 */
+        .col-md-8.blog-main>div:nth-of-type(2) .blog-post-meta a:first-of-type{
+            color: olive;
+        }
+
+        /* exercise 9 */
+        .col-md-8.blog-main>div:nth-of-type(3) ul li:nth-of-type(2) {
+            border: 1px dotted darkorchid;
+        }
+
+        /* exercise 10 */
+        body>a:last-of-type {
+            background-color: rgb(235, 205, 166);
+        }
+
+        /* exercise 11 */
+        .blog-pagination a:last-of-type {
+            background-color: cornsilk;
+        }
+
+        /* exercise 12 */
+        .blog-footer a:nth-of-type(2) {
+            background-color: aquamarine;
+        }
+
 
     </style>
     <meta charset="utf-8" />
@@ -366,6 +426,13 @@
     <script>
         /* JS Exercises should go here */
         // Write a JavaScript functionality to add a new link into the navbar
+        const newLinktoNavbar = function () {
+            let navbarNode = document.querySelector(".nav.d-flex.justify-content-between.mb-2")
+            let newLinkNode = document.createElement("a");
+            newLinkNode.href = "#";
+            newLinkNode.innerText = "Link";
+            navbarNode.appendChild(newLinkNode);
+        }
         // Write a JavaScript functionality to change the color of the main heading title
         // Write a JavaScript functionality to change the background of the jumbotron
 
