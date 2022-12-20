@@ -455,7 +455,36 @@
 
 
         // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+
+        const removeFirstCharFromPost = function() {
+            let firstParagraphsOfPosts = document.querySelectorAll(".col-md-8.blog-main>div>p:nth-of-type(2)")
+            for (p of firstParagraphsOfPosts) {
+                p.innerText = p.innerText.substring(50)
+            }
+        }
+
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
+        const addNewBlogPost = function(title, text) {
+            let blogPostSectionNode = document.querySelector(".col-md-8.blog-main");
+            let blogPaginationNode = document.querySelector(".col-md-8.blog-main .blog-pagination")
+
+            let newBlogPost = document.createElement("div");
+            newBlogPost.className = "blog-post";
+
+            let newTitle = document.createElement("h2");
+            newTitle.className = "blog-post-title";
+            newTitle.innerText = title;
+
+            let newText = document.createElement("p");
+            newText.innerText = text;
+
+            newBlogPost.appendChild(newTitle);
+            newBlogPost.appendChild(newText);
+            
+
+            blogPostSectionNode.insertBefore(newBlogPost,blogPaginationNode)
+        }
+
         // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
 
         // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
