@@ -483,11 +483,24 @@
             
 
             blogPostSectionNode.insertBefore(newBlogPost,blogPaginationNode)
+
+            
         }
 
         // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
+        
+        let olderButtonNode = document.querySelector(".btn.btn-outline-primary")
+        const removeLastPost = function() {
+            let lastPostNode = document.querySelector(".blog-post:last-of-type")
+            lastPostNode.remove();
+        }
+
+        
+        olderButtonNode.addEventListener("click", removeLastPost)
 
         // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
+
+        
         // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
     </script>
 </body>
