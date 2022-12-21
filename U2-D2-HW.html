@@ -499,9 +499,26 @@
         olderButtonNode.addEventListener("click", removeLastPost)
 
         // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
-
+        const alertAuthorName = function() {
+            let authorNameNode = document.querySelectorAll(".blog-post-meta a");
+            for (author of authorNameNode) {
+                author.addEventListener("mouseover", function(){
+                    alert(event.target.innerText);
+                }
+            )}
+        }
         
         // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
+        const removeCard = function() {
+            let continueButton = document.querySelector(".jumbotron + .row a.stretched-link");
+            let cards = document.querySelectorAll("jumbotron + .row > .col-md-6");
+            for (let i = 0; i < continueButton.length; i++) {
+                continueButton[i].addEventListener("click", function() {
+                    cards[i].remove();
+                })
+                
+            }
+        }
     </script>
 </body>
 
